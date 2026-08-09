@@ -1,0 +1,30 @@
+# 改造实录①：Todo 扩展（修复版）
+
+**配套课程**
+- 故事版《改造实录①：官方 Todo 崩了，我改一行修好》→ https://learn.pkm365.com/l/journal-todo
+- 逐行精讲 ①~④（可选硬核）→ https://learn.pkm365.com/l/walk-todo-1
+
+## 这是什么
+
+`my-todo.ts` 是 pi 官方示例 `todo.ts` 的**修复版**。
+
+官方版有个坑：结果渲染器 `renderResult` 的 `switch` **漏了 `default`**，某些情况下会返回 `undefined`；而 pi 渲染那层又**没判空**——两个凑一起，会让**整个终端界面崩溃退出**。这里补了**一行 `default` 兜底**，就修好了。
+
+课程里带你走完整个过程：**玩坏 → 看懂报错 → 改一行 → 验证**。
+
+## 怎么跑
+
+1. 先按仓库根 [SETUP.md](../SETUP.md) 把 pi 跑起来。
+2. 把 `my-todo.ts` 拷进 pi 的 `packages/coding-agent/examples/extensions/`。
+3. 启动：
+   ```bash
+   ./pi-test.sh -e packages/coding-agent/examples/extensions/my-todo.ts
+   ```
+4. 玩一遍：
+   - 让 agent 加几条待办 → `/todos` 看清单面板；
+   - `/tree` 跳到更早的历史点 → 再 `/todos`，看清单**当场跟着历史变**（它没存文件，是从"账本"重建的）。
+
+## 延伸练习
+
+- **复现崩溃**：把那个 `default` 分支删掉，故意让它崩，读一遍报错栈——练习"顺着 `文件:行号` 找根因"。
+- **修根因**：崩溃其实是**两个**坑。练习文件只补了扩展这半（`default`）；另一半在 pi 核心 `tool-execution.ts`（渲染时没判空）。试着给它补上判空，甚至给 pi 上游提个 issue / PR。
