@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2026 澄思学堂 (pkm365)
 
-Portions of this repository (notably `改造实录-todo/my-todo.ts`) are derived
+Portions of this repository (notably `亲手改一个Agent/改造实录-Todo扩展/my-todo.ts`) are derived
 from the pi project's example extensions:
   pi — https://github.com/earendil-works/pi
   Copyright (c) 2025 Mario Zechner

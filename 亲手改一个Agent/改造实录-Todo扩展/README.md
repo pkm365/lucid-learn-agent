@@ -14,7 +14,7 @@
 
 ## 怎么跑
 
-1. 先按仓库根 [SETUP.md](../SETUP.md) 把 pi 跑起来。
+1. 先按仓库根 [SETUP.md](../../SETUP.md) 把 pi 跑起来。
 2. 把 `my-todo.ts` 拷进 pi 的 `packages/coding-agent/examples/extensions/`。
 3. 启动：
    ```bash
