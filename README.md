@@ -40,8 +40,11 @@
 ├── 改造实录-Todo扩展/               ← 章（对应站上「改造实录 · 亲手改一个 Todo 扩展」）
 │   ├── my-todo.ts                   ← 练习文件（修复版扩展）
 │   └── README.md                    ← 怎么跑 + 延伸练习
-└── 改造实录-Handoff交接件/          ← 章（对应站上「改造实录② · Handoff 交接件」）
-    ├── handoff-doc.ts               ← 练习文件（/handoff-doc 命令）
+├── 改造实录-Handoff交接件/          ← 章（对应站上「改造实录② · Handoff 交接件」）
+│   ├── handoff-doc.ts               ← 练习文件（/handoff-doc 命令）
+│   └── README.md                    ← 怎么跑 + 延伸练习
+└── 改造实录-Subagent围栏/           ← 章（对应站上「改造实录③ · 派一个分身：安全靠围栏」）
+    ├── agents/                      ← 两个 agent 档案（scout 只读 / worker 可写）
     └── README.md                    ← 怎么跑 + 延伸练习
 ```
 
@@ -49,6 +52,7 @@
 | --- | --- | --- |
 | 亲手改一个 Agent | [改造实录-Todo扩展](./亲手改一个Agent/改造实录-Todo扩展/) | `my-todo.ts` |
 | 亲手改一个 Agent | [改造实录-Handoff交接件](./亲手改一个Agent/改造实录-Handoff交接件/) | `handoff-doc.ts` |
+| 亲手改一个 Agent | [改造实录-Subagent围栏](./亲手改一个Agent/改造实录-Subagent围栏/) | `agents/scout.md · worker.md` |
 | 亲手写一个 Agent | （练习文件随课程更新陆续补充） | — |
 
 > 以后每做一集，练习文件就放进「对应课程 / 对应章」的文件夹，结构和网站保持一致——你在站上看到哪一章，就能在这里对着路径找到它的文件。
