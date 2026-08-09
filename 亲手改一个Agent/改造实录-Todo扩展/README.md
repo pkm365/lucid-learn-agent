@@ -15,12 +15,12 @@
 ## 怎么跑
 
 1. 先按仓库根 [SETUP.md](../../SETUP.md) 把 pi 跑起来。
-2. 把 `my-todo.ts` 拷进 pi 的 `packages/coding-agent/examples/extensions/`。
-3. 启动：
+2. 启动时用 `-e` 指向**这个文件的路径**（绝对路径就行，不必拷进 pi）：
    ```bash
-   ./pi-test.sh -e packages/coding-agent/examples/extensions/my-todo.ts
+   cd <你的pi目录>
+   ./pi-test.sh -e <本仓库>/亲手改一个Agent/改造实录-Todo扩展/my-todo.ts
    ```
-4. 玩一遍：
+3. 玩一遍：
    - 让 agent 加几条待办 → `/todos` 看清单面板；
    - `/tree` 跳到更早的历史点 → 再 `/todos`，看清单**当场跟着历史变**（它没存文件，是从"账本"重建的）。
 

@@ -31,13 +31,15 @@ npm run build:offline        # 之后可离线构建
 
 ## 3. 加载一个扩展
 
-```bash
-# 先把练习文件（如本仓库的 my-todo.ts）拷进 pi 的示例目录
-cp 改造实录-todo/my-todo.ts <你的pi>/packages/coding-agent/examples/extensions/
+**`-e <文件>` 支持任意路径**，所以练习文件**不用拷进 pi**，直接指向你 clone 下来的这个仓库就行：
 
-# 带上它启动
+```bash
 cd <你的pi>
-./pi-test.sh -e packages/coding-agent/examples/extensions/my-todo.ts
+./pi-test.sh -e <本仓库>/亲手改一个Agent/改造实录-Todo扩展/my-todo.ts
 ```
 
 `-e <文件>` 就是"带着这个扩展启动 pi"。启动后跟 agent 说话，它就能用上扩展里的工具了。
+
+> **为什么不建议拷进 pi 的 `examples/extensions/`？**
+> 那是 pi **上游仓库自己的目录**。你下次 `git pull` 拉 pi 的更新、或者 `git clean` 清一下工作区，放在那里的文件很容易被误伤——我们就踩过这个坑。
+> 练习文件留在本仓库里，用绝对路径 `-e` 指过去，pi 那边永远保持干净。

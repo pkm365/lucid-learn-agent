@@ -36,19 +36,28 @@
 想找某一节的练习文件？照课程页的路径进来就行——**哪门课 → 哪一章**：
 
 ```
-亲手改一个Agent/                 ← 课程
-└── 改造实录-Todo扩展/           ← 章（对应站上「改造实录 · 亲手改一个 Todo 扩展」）
-    ├── my-todo.ts               ← 练习文件（修复版扩展）
-    └── README.md                ← 怎么跑 + 延伸练习
+亲手改一个Agent/                     ← 课程
+├── 改造实录-Todo扩展/               ← 章（对应站上「改造实录 · 亲手改一个 Todo 扩展」）
+│   ├── my-todo.ts                   ← 练习文件（修复版扩展）
+│   └── README.md                    ← 怎么跑 + 延伸练习
+└── 改造实录-Handoff交接件/          ← 章（对应站上「改造实录② · Handoff 交接件」）
+    ├── handoff-doc.ts               ← 练习文件（/handoff-doc 命令）
+    └── README.md                    ← 怎么跑 + 延伸练习
 ```
 
 | 课程 | 章 | 练习文件 |
 | --- | --- | --- |
 | 亲手改一个 Agent | [改造实录-Todo扩展](./亲手改一个Agent/改造实录-Todo扩展/) | `my-todo.ts` |
+| 亲手改一个 Agent | [改造实录-Handoff交接件](./亲手改一个Agent/改造实录-Handoff交接件/) | `handoff-doc.ts` |
 | 亲手写一个 Agent | （练习文件随课程更新陆续补充） | — |
 
 > 以后每做一集，练习文件就放进「对应课程 / 对应章」的文件夹，结构和网站保持一致——你在站上看到哪一章，就能在这里对着路径找到它的文件。
 
 ## 许可
 
-本仓库 MIT。其中 `亲手改一个Agent/改造实录-Todo扩展/my-todo.ts` **改编自 pi 的官方示例** `todo.ts`（MIT · © 2025 Mario Zechner）。详见 [LICENSE](./LICENSE)。
+本仓库 MIT。其中两个练习文件**改编自 pi 的官方示例**（MIT · © 2025 Mario Zechner），各自文件头都标了出处：
+
+- `亲手改一个Agent/改造实录-Todo扩展/my-todo.ts` ← 官方 `todo.ts`
+- `亲手改一个Agent/改造实录-Handoff交接件/handoff-doc.ts` ← 官方 `handoff.ts`
+
+详见 [LICENSE](./LICENSE)。
